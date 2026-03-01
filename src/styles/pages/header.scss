@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: 1rem 2rem;
+  user-select: none;
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    object-fit: contain;
+  }
+
+  &__links {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    font-weight: 700;
+    font-size: 24px;
+    // text-decoration: underline;
+    text-underline-offset: 6px;
+
+&--generic {
+      a {
+        color: #cf5161;
+      }
+    }
+
+    &--resale-iq {
+      a {
+        color: #ff6000;
+      }
+    }
+  }
+}
