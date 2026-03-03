@@ -2,6 +2,23 @@ $breakpoint-tablet: 1024px;
 $breakpoint-mobile: 640px;
 $gap-size: 1.5rem;
 
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // padding: 0 2rem;
+    width: 100%;
+    
+    @media (max-width: $breakpoint-tablet) {
+        padding: 0 1rem;
+    }
+    
+    @media (max-width: $breakpoint-mobile) {
+        padding: 0 0.5rem;
+    }
+}
+
 .projects-grid {
   display: grid;
   gap: $gap-size;
@@ -23,6 +40,7 @@ $gap-size: 1.5rem;
     border-radius: 8px;
     background: #1a1a1a;
     transition: transform 0.3s ease;
+    max-width: 600px;
 
     &:hover {
       transform: translateY(-5px);
@@ -51,7 +69,7 @@ $gap-size: 1.5rem;
   &__content {
     padding: 1rem;
     background-color: #1a1a1a;
-    opacity: 0.6;
+    opacity: 0.95;
   }
 
   &__title {
@@ -65,5 +83,41 @@ $gap-size: 1.5rem;
     font-size: 0.9rem;
     color: #ccc;
     line-height: 1.4;
+  }
+}
+
+.projects-intro {
+  max-width: 800px; 
+  padding: 4rem 2rem 2rem; 
+  text-align: center;
+  
+  &__title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    color: #cf5161; 
+  }
+
+  &__description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #000;
+    
+    strong {
+      color: #cf5161; 
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-intro {
+    &__title {
+      font-size: 2.25rem;
+    }
+    &__description {
+      font-size: 1.1rem;
+    }
   }
 }

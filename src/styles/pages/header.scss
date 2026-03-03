@@ -1,18 +1,28 @@
 .header {
   display: flex;
-  background-color: #fff;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   padding: 1rem 2rem;
   user-select: none;
+  
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.8); 
+  backdrop-filter: blur(10px); 
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
   &__icon {
     width: 70px;
     height: 70px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
     cursor: pointer;
     object-fit: contain;
+
+    &:hover {
+      transform: scale(1.1); 
+    }
   }
 
   &__links {
@@ -21,19 +31,55 @@
     flex-direction: row;
     font-weight: 700;
     font-size: 24px;
-    // text-decoration: underline;
     text-underline-offset: 6px;
 
-&--generic {
-      a {
-        color: #cf5161;
+    a {
+      transition: opacity 0.2s ease, text-decoration 0.2s ease;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &.active {
+        text-decoration: underline; 
       }
     }
 
+    &--generic {
+      a { color: #ff6000; }
+    }
+
     &--resale-iq {
-      a {
-        color: #ff6000;
-      }
+      a { color: #ff6000; }
+    }
+  }
+
+  &__link-wrapper {
+    position: relative; 
+    text-decoration: none;
+    padding: 0.5rem 0;
+    color: inherit;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__underline {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 2px;
+    
+    .header__links--generic & {
+      background-color: #ff6000;
+    }
+    .header__links--resale-iq & {
+      background-color: #ff6000;
     }
   }
 }
