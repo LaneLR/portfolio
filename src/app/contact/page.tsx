@@ -1,10 +1,9 @@
-import Link from "next/link";
+import ContactComponent from "@/components/Contact";
 
 export default function ContactPage() {
   return (
     <>
-      Contact page
-      <Link href="/projects/resale-iq">Resale IQ</Link>
+      <ContactComponent />
     </>
   );
 }
