@@ -10,13 +10,15 @@ const NAV_LINKS = [
   { name: "Contact", href: "/contact" },
 ];
 
+const prefix = '/portfolio';
+
 export default function Header() {
   const pathname = usePathname();
 
   // Determine accent color based on path
   const isResaleIQ = pathname.startsWith("/projects/resale-iq");
-  // const iconSrc = isResaleIQ ? "/images/resaleiq-portfolio-icon.png" : "/images/generic-icon.png";
-  const iconSrc = "/images/resaleiq-portfolio-icon.png";
+  // const iconSrc = isResaleIQ ? `${prefix}/images/resaleiq-portfolio-icon.png` : `${prefix}/images/generic-icon.png`;
+  const iconSrc = `${prefix}/images/resaleiq-portfolio-icon.png`;
   const colorClass = isResaleIQ ? "header__links--resale-iq" : "header__links--generic";
 
   return (

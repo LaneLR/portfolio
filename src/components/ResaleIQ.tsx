@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+const prefix = '/portfolio';
+
 export default function ResaleIQComponent() {
   const features = {
     basic: [
@@ -90,7 +92,7 @@ export default function ResaleIQComponent() {
                 <div className="web__phoneNotch"></div>
                 <div className="web__placeholderImg">
                   <img
-                    src="/images/AppDisplay.png"
+                    src={`${prefix}/images/AppDisplay.png`}
                     alt="ResaleIQ App Interface"
                   />
                 </div>

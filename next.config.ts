@@ -2,9 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  // distDir: 'docs',
-  // basePath: "/",
-  // assetPrefix: "/",
+  basePath: "/portfolio",
   images: {
     unoptimized: true,
   },

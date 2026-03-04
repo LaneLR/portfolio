@@ -2,36 +2,38 @@
 import Link from "next/link";
 import { motion } from "framer-motion"
 
+const prefix = '/portfolio';
+
 const PROJECTS = [
   {
     id: "resale-iq",
     title: "Resale IQ",
     description: "An AI-driven platform for inventory orchestration.",
-    image: "/images/resaleiq-portfolio-icon.png",
+    image: `${prefix}/images/resaleiq-portfolio-icon.png`,
   },
   {
     id: "second",
     title: "Cloud Optimizer",
     description: "Refactored complex DB queries to handle high concurrency.",
-    image: "/images/resaleiq-portfolio-icon.png",
+    image: `${prefix}/images/resaleiq-portfolio-icon.png`,
   },
   {
     id: "third",
     title: "Cloud Optimizer",
     description: "Refactored complex DB queries to handle high concurrency.",
-    image: "/images/resaleiq-portfolio-icon.png",
+    image: `${prefix}/images/resaleiq-portfolio-icon.png`,
   },
   {
     id: "fourth",
     title: "Cloud Optimizer",
     description: "Refactored complex DB queries to handle high concurrency.",
-    image: "/images/resaleiq-portfolio-icon.png",
+    image: `${prefix}/images/resaleiq-portfolio-icon.png`,
   },
   {
     id: "fifth",
     title: "Cloud Optimizer",
     description: "Refactored complex DB queries to handle high concurrency.",
-    image: "/images/resaleiq-portfolio-icon.png",
+    image: `${prefix}/images/resaleiq-portfolio-icon.png`,
   },
 ];
 
