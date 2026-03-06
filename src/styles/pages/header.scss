@@ -5,6 +5,11 @@
   width: 100%;
   padding: 1rem 2rem;
   user-select: none;
+
+  
+    @media screen and (max-width: 500px) {
+      justify-content: center;
+    }
   
   position: sticky;
   top: 0;
@@ -22,6 +27,17 @@
 
     &:hover {
       transform: scale(1.1); 
+    }
+
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
+  }
+
+  &__icon-link {
+    
+    @media screen and (max-width: 500px) {
+      display: none;
     }
   }
 

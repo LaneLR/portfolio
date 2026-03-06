@@ -1,7 +1,7 @@
 $accent-color: #ff6000;
 $text-main: #1a1a1a;
 $breakpoint-tablet: 1024px;
-$breakpoint-mobile: 640px;
+$breakpoint-mobile: 500px;
 $gap-size: 1.5rem;
 
 .projects-container {
@@ -16,7 +16,7 @@ $gap-size: 1.5rem;
   }
 
   @media (max-width: $breakpoint-mobile) {
-    padding: 0 0.5rem;
+    padding: 0 0.5rem 2rem 0.5rem;
   }
 }
 

@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <nav className="header">
-      <Link href="/">
+      <Link className="header__icon-link" href="/">
         <img className="header__icon" src={iconSrc} alt="Logo" />
       </Link>
 
