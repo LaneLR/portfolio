@@ -1,8 +1,8 @@
-# Who am I?
+# Lane Richardson | Software Engineer
 
 Hi, I'm **Lane Richardson**. This is my software engineering portfolio which showcases my projects, experience, and technical expertise. I created this portfolio to demonstrate my proficiency in modern web frameworks, full-stack development, and collaborative engineering practices; and, more importantly, to share with everyone the work projects and applications I'm proud to have created or be a part of!
 
-## 📋 Multiverse & Verizon Apprenticeship Overview
+## 📋 Multiverse & Verizon Apprenticeship 
 
 Many of the projects on my portfolio are the result of the work I've put in through the year-long **Multiverse Software Engineering program** that I've been a part of as a **Verizon Software Engineer Apprentice**. This portfolio contains all of the projects from the program as well as some of my own personal projects that hightlight the skills I've developed over the course of the program and apprenticeship.
 
