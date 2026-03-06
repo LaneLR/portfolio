@@ -52,7 +52,7 @@ It's because of this program, and the coaching and mentorship I've received over
 ### 5. **News Aggregator App**
 
 - **Description:** Web application that aggregates and displays news content from multiple RSS feeds.
-- **Tech Stack:** JavaScript, Next.js/React, .
+- **Tech Stack:** JavaScript, Next.js/React.
 - **Key Features:** Multi-source RSS parsing, periodic feed , content filtering.
 - **Repository:** [GitHub Repo](https://github.com/LaneLR/news-aggregator-app)
 
@@ -65,7 +65,7 @@ It's because of this program, and the coaching and mentorship I've received over
 
 ## 📲 Contact
 
-You can find me or contact me in the ways below:
+What to collaborate or contact me? Find me or contact me in the ways below:
 
 - **Email:** LaneLeeRichardson@gmail.com
 - **GitHub:** [LaneLR](https://github.com/LaneLR)
