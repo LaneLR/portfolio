@@ -61,29 +61,15 @@ export default function LandingClient() {
         </motion.p>
 
         <motion.div className="hero__actions" variants={itemVariants}>
-          <Link href="/projects" className="hero__btn hero__btn--primary">
+          <Link href="/#projects" className="hero__btn hero__btn--primary">
             View Projects
           </Link>
-          <Link href="/contact" className="hero__btn hero__btn--secondary">
+          <Link href="/#contact" className="hero__btn hero__btn--secondary">
             Talk to Me
           </Link>
         </motion.div>
       </motion.section>
-
-      {/* Subtle background element for theme consistency */}
       <div className="landing__decoration" aria-hidden="true"></div>
-      {/* <section className="section-2">
-        <h2>What Drives Me</h2>
-        <p className="hero__subtitle-small">
-          I want to experience challenging problems to sharpen and broaden my
-          skills, and to create solutions that make a positive impact.
-        </p>
-        <p className="hero__subtitle-small">Why?</p>
-        <p className="hero__subtitle-small">
-          Because in my future career I want to be good enough as a software
-          engineer to mentor the next generation of developers.
-        </p>
-      </section> */}
     </main>
   );
 }

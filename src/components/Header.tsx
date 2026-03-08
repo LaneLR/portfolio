@@ -1,37 +1,66 @@
 "use client";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 const NAV_LINKS = [
-  // { name: "Experience", href: "/experience" },
-  { name: "Home", href: "/" },
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "/#home", id: "home" },
+  { name: "Experience", href: "/#experience", id: "experience" },
+  { name: "Projects", href: "/#projects", id: "projects" },
+  { name: "Contact", href: "/#contact", id: "contact" },
 ];
-
-const prefix = '/portfolio';
 
 export default function Header() {
   const pathname = usePathname();
-
-  // Determine accent color based on path
+  const [activeHash, setActiveHash] = useState("home");
   const isResaleIQ = pathname.startsWith("/projects/resale-iq");
-  // const iconSrc = isResaleIQ ? `${prefix}/images/resaleiq-portfolio-icon.png` : `${prefix}/images/generic-icon.png`;
-  const iconSrc = `${prefix}/images/resaleiq-portfolio-icon.png`;
-  const colorClass = isResaleIQ ? "header__links--resale-iq" : "header__links--generic";
+
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    const observerOptions = {
+      root: null, 
+      rootMargin: "-40% 0px -40% 0px", 
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveHash(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const sections = ["home", "experience", "projects", "contact"];
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [pathname]);
 
   return (
     <nav className="header">
-      <Link className="header__icon-link" href="/">
-        <img className="header__icon" src={iconSrc} alt="Logo" />
+      <Link className="header__icon-link" href="/#home">
+        <img className="header__icon" src="/images/resaleiq-portfolio-icon.png" alt="Logo" />
       </Link>
 
-      <div className={`header__links ${colorClass}`}>
+      <div className={`header__links ${isResaleIQ ? "header__links--resale-iq" : "header__links--generic"}`}>
         {NAV_LINKS.map((link) => {
-          const isCurrent = pathname === link.href;
+          const isCurrent = pathname === "/" && activeHash === link.id;
+
           return (
-            <Link key={link.href} href={link.href} className="header__link-wrapper">
+            <Link 
+              key={link.href} 
+              href={link.href} 
+              className="header__link-wrapper"
+              onClick={() => setActiveHash(link.id)} 
+            >
               {link.name}
               {isCurrent && (
                 <motion.div

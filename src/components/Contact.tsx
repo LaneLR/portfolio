@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const prefix = "/portfolio";
 
 export default function ContactComponent() {
   const [submitted, setSubmitted] = useState(false);
@@ -47,9 +46,9 @@ export default function ContactComponent() {
         animate="visible"
       >
         <motion.h1 className="contact__title" variants={itemVariants}>
-          <span>Let’s</span>
-          <span className="hero__title--accent">Build</span>
-          <span>Together.</span>
+          <div className="projects-section__heading-container">
+            <h2 className="projects-section__heading">Contact Me</h2>
+          </div>
         </motion.h1>
 
         <motion.div className="contact__container" variants={itemVariants}>
