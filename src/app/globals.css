@@ -4,7 +4,12 @@
 }
 
 html {
-  /* scrollbar-gutter: stable; */
+  scroll-behavior: smooth;
+  scroll-padding-top: 0;
+
+  @media screen and (max-width: 500px) {
+    scroll-padding-top: 50px;
+  }
 }
 
 html,
@@ -13,6 +18,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   min-height: 100dvh;
+  scroll-behavior: smooth;
 }
 
 body {

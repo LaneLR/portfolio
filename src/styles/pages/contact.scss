@@ -9,6 +9,12 @@ $text-main: #1a1a1a;
   justify-content: center;
   padding: 4rem 2rem;
 
+  @media screen and (max-width: 500px) {
+    padding: 1rem;
+    height: auto;
+    padding-bottom: 48px;
+  }
+
   &__hero {
     max-width: 900px;
     width: 100%;
@@ -22,7 +28,12 @@ $text-main: #1a1a1a;
     font-size: clamp(2.5rem, 7vw, 5rem);
     font-weight: 800;
     line-height: 1;
-    margin-bottom: 4rem;
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      gap: 10px;
+      font-size: 50px;
+    }
 
     &--left { text-align: left; }
     &--center { text-align: center; color: $accent-color; }
@@ -36,6 +47,10 @@ $text-main: #1a1a1a;
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+
+    @media screen and (max-width: 500px) {
+      padding: 1rem;
+    }
   }
 
   &__group {

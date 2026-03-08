@@ -1,0 +1,96 @@
+$accent-color: #ff6000;
+$text-main: #1a1a1a;
+
+.experience {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+
+  @media screen and (max-width: 500px) {
+    padding: 64px 2rem 0;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0; 
+  }
+
+  &__card {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__time-rail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20px;
+  }
+
+  &__dot {
+    width: 14px;
+    height: 14px;
+    background: $accent-color;
+    border-radius: 50%;
+    margin-top: 8px;
+    z-index: 2;
+  }
+
+  &__line {
+    flex-grow: 1;
+    width: 2px;
+    background: rgba($text-main, 0.1);
+  }
+
+  &__content {
+    padding-bottom: 4rem; 
+    flex: 1;
+  }
+
+  &__period {
+    font-weight: 700;
+    color: $accent-color;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+
+  &__role {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0.5rem 0;
+  }
+
+  &__company {
+    font-weight: 600;
+    color: lighten($text-main, 20%);
+    margin-bottom: 1rem;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  &__tag {
+    background: rgba($text-main, 0.05);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
