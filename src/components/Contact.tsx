@@ -19,24 +19,24 @@ export default function ContactComponent() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.6 } },
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    const formData = new FormData(e.currentTarget);
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const message = formData.get("message");
+  const formData = new FormData(e.currentTarget);
+  const name = formData.get("name");
+  const email = formData.get("email");
+  const message = formData.get("message");
 
-    const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-    );
+  const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+  const body = encodeURIComponent(
+    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+  );
 
-    window.location.href = `mailto:your-email@example.com?subject=${subject}&body=${body}`;
+  // Replace with your actual email
+  window.location.href = `mailto:laneleerichardson@gmail.com?subject=${subject}&body=${body}`;
 
-    setSubmitted(true);
-  };
-
+  setSubmitted(true);
+};
   return (
     <main className="contact">
       <motion.section
