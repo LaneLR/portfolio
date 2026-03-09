@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function ContactComponent() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [name, setName] = useState('');
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -29,6 +30,8 @@ export default function ContactComponent() {
       email: formData.get("email"),
       message: formData.get("message"),
     };
+
+    setName(data.name as string);
 
     try {
       const response = await fetch("/api/email", {
@@ -78,7 +81,7 @@ export default function ContactComponent() {
                   className="contact__input"
                   placeholder="Lane Richardson"
                   required
-                  disabled={loading} // Disable during load
+                  disabled={loading} 
                 />
               </div>
 
@@ -119,11 +122,15 @@ export default function ContactComponent() {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
             >
-              <h2>Message Sent!</h2>
-              <p>Thanks, Lane. I&apos;ll get back to you soon.</p>
+              <h2>Email Sent!</h2>
+              <br />
+              <p>Thanks for the message, {name}! I&apos;ll get back to you as soon as I can.</p>
               <br />
               <button
-                onClick={() => setSubmitted(false)}
+                onClick={() => {
+                  setSubmitted(false);
+                  setName('');
+                }}
                 className="contact__btn contact__btn--alt"
               >
                 Send Another
