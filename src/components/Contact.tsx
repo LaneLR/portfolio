@@ -79,7 +79,7 @@ export default function ContactComponent() {
                   name="name"
                   type="text"
                   className="contact__input"
-                  placeholder="Lane Richardson"
+                  placeholder="Your Name"
                   required
                   disabled={loading} 
                 />
@@ -91,7 +91,7 @@ export default function ContactComponent() {
                   name="email"
                   type="email"
                   className="contact__input"
-                  placeholder="lane@example.com"
+                  placeholder="your-email@example.com"
                   required
                   disabled={loading}
                 />
@@ -113,7 +113,7 @@ export default function ContactComponent() {
                 className={`contact__btn ${loading ? "contact__btn--loading" : ""}`}
                 disabled={loading}
               >
-                {loading ? "Sending..." : "Send Message"}
+                {loading ? "Sending..." : "Send Email"}
               </button>
             </form>
           ) : (

@@ -34,7 +34,7 @@ const PROJECTS = [
   },
   {
     id: "news-aggregator",
-    title: "News Aggregator App",
+    title: "News Aggregator Service",
     description: "A web application for aggregating and displaying news from various RSS feeds.",
     image: `/images/morningfeeds.png`,
     link: "https://github.com/LaneLR/news-aggregator-app",

@@ -39,25 +39,26 @@ export default function LandingClient() {
         <motion.p className="hero__subtitle" variants={itemVariants}>
           Hi, I&apos;m <strong className="hero__strong">Lane Richardson</strong>
           ! I&apos;m a{" "}
-          <strong className="hero__strong">
-            full-stack software engineer
-          </strong>{" "}
-          who specializes in the frontend.
+          <strong className="hero__strong">Full-stack Software Engineer</strong>{" "}
+          specializing in building scalable frontend architectures.
         </motion.p>
         <motion.p className="hero__subtitle" variants={itemVariants}>
-          As a self-taught developer, I received my first software engineering
-          role at{" "}
-          <strong className="hero__strong">Verizon Communications</strong> as an
-          apprentice where I received mentorship from senior engineers and
-          refined my skills designing and building scalable production-ready web
-          applications.
-        </motion.p>
-        <motion.p className="hero__subtitle" variants={itemVariants}>
-          You can see much of my work on large-brand websites like{" "}
+          Currently, I&apos;m a frontend software engineer at{" "}
+          <strong className="hero__strong">Verizon</strong> where I specialize
+          in modernizing legacy systems using React, Next.js and TypeScript, and
+          enhancing user experiences for major brands like{" "}
           <strong className="hero__strong">Total Wireless</strong>,{" "}
           <strong className="hero__strong">Straight Talk</strong>, and{" "}
-          <strong className="hero__strong">Visible</strong>! And if you&apos;re
-          interested, take a look at my projects as well! 
+          <strong className="hero__strong">Visible</strong>! If you&apos;d like
+          to see some of my work, check out the websites for the brands above.
+        </motion.p>
+        <motion.p className="hero__subtitle" variants={itemVariants}>
+          I&apos;m also working on an{" "}
+          <strong className="hero__strong">
+            AI-focused mobile app for iOS
+          </strong>
+          . If you&apos;re interested or wondering about some of my other work and personal projects,
+          take a look at my projects.
         </motion.p>
 
         <motion.div className="hero__actions" variants={itemVariants}>
