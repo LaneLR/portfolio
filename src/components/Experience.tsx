@@ -3,20 +3,20 @@ import { motion } from "framer-motion";
 
 const EXPERIENCES = [
   {
-    company: "Multiverse",
-    role: "Software Engineering Apprentice",
-    period: "2024 - Present",
+    company: "Verizon",
+    role: "Software Engineer I",
+    period: "2025 - Present",
     description:
-      "Developing full-stack applications using Next.js and Node.js while collaborating with cross-functional teams.",
-    skills: ["React", "TypeScript", "PostgreSQL", "Agile"],
+      "Modernizing well-known phone service providers websites into, improving performance and user experience for millions of users.",
+    skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "SCSS"],
   },
   {
-    company: "Previous Tech Corp",
-    role: "Junior Web Developer",
-    period: "2022 - 2023",
+    company: "",
+    role: "Independent Full-stack Developer",
+    period: "2023 - Present",
     description:
-      "Optimized frontend performance and maintained legacy PHP systems for enterprise clients.",
-    skills: ["JavaScript", "Sass", "PHP", "MySQL"],
+      "Developing a variety of projects, including an AI image analysis mobile app, a calendar and scheduling application, and a news aggregator service.",
+    skills: ["Java", "Python", "React", "Next.js", "Node.js", "Express", "TypeScript", "JavaScript", "HTML", "SCSS", "Stripe", "Capacitor", "Vertex AI"],
   },
 ];
 
