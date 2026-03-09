@@ -1,22 +1,41 @@
-import { Resend } from 'resend';
-import { NextResponse } from 'next/server';
+export const dynamic = "force-dynamic";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { Resend } from "resend";
+import { NextResponse } from "next/server";
+
+const resend = process.env.RESEND_API_KEY
+  ? new Resend(process.env.RESEND_API_KEY)
+  : null;
 
 export async function POST(request: Request) {
+  if (!resend) {
+    return NextResponse.json(
+      { error: "Service not configured" },
+      { status: 500 },
+    );
+  }
+
   try {
     const { name, email, message } = await request.json();
-    
-    await resend.emails.send({
-      from: 'Portfolio Inquiry', 
-      to: 'laneleerichardson@gmail.com',
-      subject: `New Inquiry from ${name}`,
-      replyTo: email,
-      text: message,
+
+    const data = await resend.emails.send({
+      from: "Portfolio <onboarding@resend.dev>",
+      to: ["laneleerichardson@gmail.com"],
+      subject: `New Portfolio Message from ${name}`,
+      replyTo: email, // Changed from reply_to to replyTo
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
 
-    return NextResponse.json({ success: true });
+    // Resend returns { data, error }. We check for data.id
+    if (data.error) {
+      return NextResponse.json({ error: data.error }, { status: 400 });
+    }
+
+    return NextResponse.json({ success: true, id: data.data?.id });
   } catch (error) {
-    return NextResponse.json({ error: "Failed to send" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Internal Server Error" },
+      { status: 500 },
+    );
   }
 }
