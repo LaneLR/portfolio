@@ -98,7 +98,6 @@ $text-main: #1a1a1a;
   &__subtitle {
     font-size: 1.5rem;
     line-height: 1.6;
-    color: lighten($text-main, 20%);
     max-width: 750px;
     margin-bottom: 1rem;
   }
@@ -106,7 +105,6 @@ $text-main: #1a1a1a;
   &__subtitle-small {
     font-size: 1.5rem;
     line-height: 1.6;
-    color: lighten($text-main, 20%);
     max-width: 750px;
   }
 
