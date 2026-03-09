@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Check,
@@ -8,7 +9,8 @@ import {
   Sparkles,
 } from "lucide-react";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
+import { view } from "framer-motion/client";
 
 export default function ResaleIQComponent() {
   const features = {
@@ -52,6 +54,9 @@ export default function ResaleIQComponent() {
 
   const text1 = `"Wait, what's this?"`;
   const text2 = "Sold for $200.";
+
+  const isMobile = window.innerWidth < 600;
+
   return (
     <div className="web">
       {/* Hero Section */}
@@ -69,13 +74,13 @@ export default function ResaleIQComponent() {
               <span className="web__titleHighlight">{text2}</span>
             </h1>
             <p className="web__subtitle">
-              Scan items instantly. Analyze market value. Resell and flip with confidence.
-              The most powerful tool for resellers and thrifters.
+              Scan items instantly. Analyze market value. Resell and flip with
+              confidence. The most powerful tool for resellers and thrifters.
             </p>
             <div className="web__actions">
               <Link href={"/login"}>
-                <button className="web__btn web__btnPrimary">
-                  Start For Free
+                <button className="web__btn web__btnPrimary" disabled>
+                  Coming soon to the Apple App Store
                 </button>
               </Link>
 
@@ -90,10 +95,25 @@ export default function ResaleIQComponent() {
               <div className="web__phoneFrame">
                 <div className="web__phoneNotch"></div>
                 <div className="web__placeholderImg">
-                  <img
-                    src={`/images/AppDisplay.png`}
-                    alt="ResaleIQ App Interface"
-                  />
+                  {isMobile ? (
+                    <motion.img
+                      src={`/images/FullAppDisplay.png`}
+                      alt="ResaleIQ App Interface"
+                      initial={{ objectPosition: "top" }}
+                      whileInView={{ objectPosition: "bottom" }}
+                      viewport={{ amount: 1, once: true }}
+                      transition={{
+                        duration: 1.5,
+                        ease: "easeInOut",
+                        delay: 0.3,
+                      }}
+                    />
+                  ) : (
+                    <img
+                      src={`/images/FullAppDisplay.png`}
+                      alt="ResaleIQ App Interface"
+                    />
+                  )}
                 </div>
                 <div className="web__phoneButton volume"></div>
                 <div className="web__phoneButton power"></div>
@@ -130,8 +150,7 @@ export default function ResaleIQComponent() {
               </div>
               <h3 className="stepItem__title">Real-Time Data</h3>
               <p className="stepItem__text">
-                Instantly see live sold listings and current comps from eBay and
-                Poshmark.
+                Instantly see previously sold items and current listings from eBay, Facebook Marketplace, and other online marketplaces.
               </p>
             </div>
             <div className="stepItem">
@@ -140,8 +159,8 @@ export default function ResaleIQComponent() {
               </div>
               <h3 className="stepItem__title">Instant Logic</h3>
               <p className="stepItem__text">
-                We factor in shipping and platform fees to show your true net
-                profit.
+                Shipping and platform fees are factored in to show your net
+                profit per item scan.
               </p>
             </div>
           </div>
@@ -153,9 +172,9 @@ export default function ResaleIQComponent() {
         <div className="web__container">
           <div className="web__sectionHeader">
             <h2 className="web__sectionTitleBlack">Affordable Pricing</h2>
-            <p className="web__sectionParagraphBlack">
+            {/* <p className="web__sectionParagraphBlack">
               From the shelf to your bank account in three steps.
-            </p>
+            </p> */}
           </div>
           <div className="web__pricingWrapper">
             <div className="planCard">
@@ -170,9 +189,9 @@ export default function ResaleIQComponent() {
                   </li>
                 ))}
               </ul>
-              <Link href={"/login"}>
+              {/* <Link href={"/login"}> */}
                 <button className="planCard__btn">Create Account</button>
-              </Link>
+              {/* </Link> */}
             </div>
 
             <div className="planCard planCardPro">
@@ -187,11 +206,11 @@ export default function ResaleIQComponent() {
                   </li>
                 ))}
               </ul>
-              <Link href={"/login"}>
+              {/* <Link href={"/login"}> */}
                 <button className="planCard__btn planCard__btnHighlight">
                   Upgrade to Hobby Plan
                 </button>
-              </Link>
+              {/* </Link> */}
             </div>
 
             <div className="planCard planCardPro">
@@ -207,11 +226,11 @@ export default function ResaleIQComponent() {
                   </li>
                 ))}
               </ul>
-              <Link href={"/login"}>
+              {/* <Link href={"/login"}> */}
                 <button className="planCard__btn planCard__btnHighlight">
                   Upgrade to Pro Plan
                 </button>
-              </Link>
+              {/* </Link> */}
             </div>
 
             <div className="planCard planCardPro">
@@ -227,11 +246,11 @@ export default function ResaleIQComponent() {
                   </li>
                 ))}
               </ul>
-              <Link href={"/login"}>
+              {/* <Link href={"/login"}> */}
                 <button className="planCard__btn planCard__btnHighlight">
                   Upgrade to Elite Plan
                 </button>
-              </Link>
+              {/* </Link> */}
             </div>
           </div>
         </div>

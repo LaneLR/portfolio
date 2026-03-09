@@ -8,14 +8,14 @@ const PROJECTS = [
     id: "resale-iq",
     title: "AI Image Analyzer Mobile App",
     description: "AI image analysis mobile application for item identification, valuation, and inventory management.",
-    image: `/images/resaleiq-portfolio-icon.png`,
+    image: `/images/AppDisplayLight.png`,
     link: `projects/resale-iq`,
   },
   {
     id: "planz",
     title: "Planz Calendar App",
     description: "Calendar and scheduling app for creating and tracking events with friends.",
-    image: `/images/resaleiq-portfolio-icon.png`,
+    image: `/images/planzdisplay.png`,
     link: "https://github.com/LaneLR/Planz-Calendar-App",
   },
   {
@@ -29,14 +29,14 @@ const PROJECTS = [
     id: "inventory",
     title: "Inventory Management System",
     description: "Frontend for an inventory management system.",
-    image: `/images/resaleiq-portfolio-icon.png`,
+    image: `/images/inventoryapp.png`,
     link: "https://github.com/katara-org/inventory-app",
   },
   {
     id: "news-aggregator",
     title: "News Aggregator App",
     description: "A web application for aggregating and displaying news from various RSS feeds.",
-    image: `/images/resaleiq-portfolio-icon.png`,
+    image: `/images/morningfeeds.png`,
     link: "https://github.com/LaneLR/news-aggregator-app",
   },
 ];

@@ -40,7 +40,7 @@ export default function LandingClient() {
           Hi, I&apos;m <strong className="hero__strong">Lane Richardson</strong>
           ! I&apos;m a{" "}
           <strong className="hero__strong">
-            junior full-stack Software Engineer
+            full-stack software engineer
           </strong>{" "}
           who specializes in the frontend.
         </motion.p>

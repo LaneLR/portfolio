@@ -148,6 +148,14 @@
 
     &:hover {
       transform: rotateY(0) rotateX(0) rotateZ(0);
+
+      .web__placeholderImg img {
+        object-position: bottom;
+      }
+
+      @media (max-width: 600px) {
+        transform: rotateY(-15deg) rotateX(8deg) rotateZ(2deg);
+      }
     }
   }
 
@@ -159,7 +167,8 @@
     background: #1a1a1a;
     border-radius: 45px;
     padding: 12px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5),
+    box-shadow:
+      0 20px 50px rgba(0, 0, 0, 0.5),
       inset 0 0 2px 2px rgba(255, 255, 255, 0.3);
     border: 1px solid #333;
   }
@@ -212,6 +221,23 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top;
+      transition: object-position 1s ease-in-out;
+
+      @media (max-width: 1024px) {
+        img {
+          animation: mobileAppScroll 8s infinite alternate ease-in-out;
+        }
+      }
+
+      @keyframes mobileAppScroll {
+        0% {
+          object-position: top;
+        }
+        100% {
+          object-position: bottom;
+        }
+      }
     }
 
     // Add a subtle screen reflection/glare
@@ -282,27 +308,27 @@
     background-color: var(--bg-main);
   }
 
-&__pricingWrapper {
-  display: grid;
-  /* Use 4 columns on large screens, auto-sizing based on content */
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 20px; /* Reduced gap to help fit side-by-side */
-  margin-top: 60px;
-  width: 100%;
-  align-items: stretch;
+  &__pricingWrapper {
+    display: grid;
+    /* Use 4 columns on large screens, auto-sizing based on content */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Reduced gap to help fit side-by-side */
+    margin-top: 60px;
+    width: 100%;
+    align-items: stretch;
 
-  @media (min-width: 1201px) and (max-width: 1550px) {
-    grid-template-columns: repeat(3, 1fr); /* 2x2 on tablets */
-  }
+    @media (min-width: 1201px) and (max-width: 1550px) {
+      grid-template-columns: repeat(3, 1fr); /* 2x2 on tablets */
+    }
 
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(2, 1fr); /* 2x2 on tablets */
-  }
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr); /* 2x2 on tablets */
+    }
 
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr; /* 1 column on mobile */
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr; /* 1 column on mobile */
+    }
   }
-}
 }
 
 .stepItem {
@@ -361,7 +387,7 @@
   &Pro {
     border: 2px solid var(--primary-theme);
     /* Removed 'scale' as it causes overlapping on tight rows */
-    // background: linear-gradient(to bottom, #fff, #fff3eb); 
+    // background: linear-gradient(to bottom, #fff, #fff3eb);
     z-index: 2;
   }
 
@@ -374,7 +400,7 @@
     font-size: 3rem; /* Slightly smaller to prevent text overflow */
     font-weight: 850;
     margin: 16px 0;
-    
+
     span {
       font-size: 0.9rem;
     }
