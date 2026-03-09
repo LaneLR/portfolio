@@ -2,9 +2,9 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-
 export default function ContactComponent() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -19,24 +19,40 @@ export default function ContactComponent() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.6 } },
   };
 
-const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
 
-  const formData = new FormData(e.currentTarget);
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
 
-  const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
-  const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-  );
+    try {
+      const response = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-  // Replace with your actual email
-  window.location.href = `mailto:laneleerichardson@gmail.com?subject=${subject}&body=${body}`;
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        const errorData = await response.json();
+        alert(`Error: ${errorData.error || "Failed to send message"}`);
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  setSubmitted(true);
-};
   return (
     <main className="contact">
       <motion.section
@@ -57,37 +73,44 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
               <div className="contact__group">
                 <label className="contact__label">Full Name</label>
                 <input
-                  name="name" 
+                  name="name"
                   type="text"
                   className="contact__input"
                   placeholder="Lane Richardson"
                   required
+                  disabled={loading} // Disable during load
                 />
               </div>
 
               <div className="contact__group">
                 <label className="contact__label">Email Address</label>
                 <input
-                  name="email" 
+                  name="email"
                   type="email"
                   className="contact__input"
                   placeholder="lane@example.com"
                   required
+                  disabled={loading}
                 />
               </div>
 
               <div className="contact__group">
                 <label className="contact__label">Message</label>
                 <textarea
-                  name="message" 
+                  name="message"
                   className="contact__input contact__input--textarea"
                   placeholder="Tell me about your project..."
                   required
+                  disabled={loading}
                 />
               </div>
 
-              <button type="submit" className="contact__btn">
-                Send Message
+              <button
+                type="submit"
+                className={`contact__btn ${loading ? "contact__btn--loading" : ""}`}
+                disabled={loading}
+              >
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </form>
           ) : (
@@ -97,7 +120,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
               animate={{ scale: 1, opacity: 1 }}
             >
               <h2>Message Sent!</h2>
-              <br />
+              <p>Thanks, Lane. I&apos;ll get back to you soon.</p>
               <br />
               <button
                 onClick={() => setSubmitted(false)}
