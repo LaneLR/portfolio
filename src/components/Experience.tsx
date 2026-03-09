@@ -7,7 +7,7 @@ const EXPERIENCES = [
     role: "Software Engineer I",
     period: "2025 - Present",
     description:
-      "Modernizing well-known phone service providers websites into, improving performance and user experience for millions of users.",
+      "Modernizing high-traffic webpages for leading telecommunications brands, including Total Wireless and Visible, optimizing frontend performance, user experience, and accessibility for millions of users.",
     skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "SCSS"],
   },
   {
