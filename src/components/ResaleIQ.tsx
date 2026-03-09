@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Check,
   PlayCircle,
@@ -10,9 +10,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { view } from "framer-motion/client";
 
 export default function ResaleIQComponent() {
+  const [isMobile, setIsMobile] = useState(false);
   const features = {
     basic: [
       "5 Scans per day.",
@@ -55,7 +55,16 @@ export default function ResaleIQComponent() {
   const text1 = `"Wait, what's this?"`;
   const text2 = "Sold for $200.";
 
-  const isMobile = window.innerWidth < 600;
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 600);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className="web">
