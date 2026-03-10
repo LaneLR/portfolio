@@ -8,7 +8,7 @@ const EXPERIENCES = [
     period: "2025 - Present",
     description:
       "Modernizing high-traffic webpages for leading telecommunications brands, including Total Wireless and Visible, optimizing frontend performance, user experience, and accessibility for millions of users.",
-    skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "SCSS"],
+    skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "SCSS", "Redux", "Figma", "Jira", "Jenkins", "SonarQube",],
   },
   {
     company: "",
@@ -16,7 +16,7 @@ const EXPERIENCES = [
     period: "2023 - Present",
     description:
       "Developing a variety of projects, including an AI image analysis mobile app, a calendar and scheduling application, and a news aggregator service.",
-    skills: ["Java", "Python", "React", "Next.js", "Node.js", "Express", "TypeScript", "JavaScript", "HTML", "SCSS", "Stripe", "Capacitor", "Vertex AI", "Gemini API", ],
+    skills: ["Java", "Python", "React", "Next.js", "Node.js", "Express", "TypeScript", "JavaScript", "HTML", "SCSS", "Stripe", "Capacitor", "Vertex AI", "Gemini API", "GitHub Actions", "SonarQube",],
   },
 ];
 
