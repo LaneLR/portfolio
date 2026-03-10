@@ -14,7 +14,7 @@ const NAV_LINKS = [
 export default function Header() {
   const pathname = usePathname();
   const [activeHash, setActiveHash] = useState("home");
-  const isResaleIQ = pathname.startsWith("/projects/resale-iq");
+  const isAIAnalyzer = pathname.startsWith("/projects/ai-analyzer");
 
   useEffect(() => {
     if (pathname !== "/") return;
@@ -50,7 +50,7 @@ export default function Header() {
         <img className="header__icon" src="/images/resaleiq-portfolio-icon.png" alt="Logo" />
       </Link>
 
-      <div className={`header__links ${isResaleIQ ? "header__links--resale-iq" : "header__links--generic"}`}>
+      <div className={`header__links ${isAIAnalyzer ? "header__links--resale-iq" : "header__links--generic"}`}>
         {NAV_LINKS.map((link) => {
           const isCurrent = pathname === "/" && activeHash === link.id;
 
