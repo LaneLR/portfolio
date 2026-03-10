@@ -16,7 +16,7 @@ const EXPERIENCES = [
     period: "2023 - Present",
     description:
       "Developing a variety of projects, including an AI image analysis mobile app, a calendar and scheduling application, and a news aggregator service.",
-    skills: ["Java", "Python", "React", "Next.js", "Node.js", "Express", "TypeScript", "JavaScript", "HTML", "SCSS", "Stripe", "Capacitor", "Vertex AI"],
+    skills: ["Java", "Python", "React", "Next.js", "Node.js", "Express", "TypeScript", "JavaScript", "HTML", "SCSS", "Stripe", "Capacitor", "Vertex AI", "Gemini API", ],
   },
 ];
 
