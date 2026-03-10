@@ -22,7 +22,7 @@ It's because of this program, and the coaching and mentorship I've received over
 - **Description:** AI-powered mobile application for item identification, valuation, and inventory management.
 - **Tech Stack:** TypeScript, Next.js/React, Node.js, Python, PostgreSQL.
 - **Key Features:** Image recognition, item valuation, inventory tracking, image background removal.
-- **Link:** [Project Page](https://lanelr.github.io/portfolio/projects/resale-iq)
+- **Link:** [Project Page](https://lanelr.github.io/portfolio/projects/ai-analyzer)
 - **Purpose:** I created this app for two reasons:
   1. Solve a problem I experience frequently while thrift shopping, and
   2. Challenge myself to develop my first iOS mobile app.
