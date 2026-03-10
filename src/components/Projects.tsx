@@ -8,8 +8,8 @@ const PROJECTS = [
     id: "resale-iq",
     title: "AI Image Analyzer Mobile App",
     description: "AI image analysis mobile application for item identification, valuation, and inventory management.",
-    image: `/images/AppDisplayLight.png`,
-    link: `projects/resale-iq`,
+    image: `/images/MultiPageDisplay.png`,
+    link: `projects/ai-analyzer`,
   },
   {
     id: "planz",
