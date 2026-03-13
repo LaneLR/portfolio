@@ -8,10 +8,10 @@ $text-main: #1a1a1a;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   padding: 120px 2rem 4rem;
   width: 100%;
-  gap: 46px;
+  gap: 128px;
 
   @media screen and (max-width: 500px) {
     padding: 120px 2rem 0;
@@ -50,6 +50,10 @@ $text-main: #1a1a1a;
     margin-bottom: 2rem;
     gap: 26px;
     color: $text-main;
+
+    &--h3 {
+      font-size: 3rem
+    }
 
     @media screen and (max-width: 500px) {
       gap: 16px;

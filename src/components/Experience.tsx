@@ -36,7 +36,7 @@ const cardVariants = {
 export default function ExperienceComponent() {
   return (
     <section className="experience" id="experience">
-      <div className="projects-section__heading-container">
+      <div className="experience-section">
         <h2 className="projects-section__heading">Experience</h2>
       </div>
 

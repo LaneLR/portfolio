@@ -27,13 +27,6 @@ export default function LandingClient() {
       >
         <motion.h1 className="hero__title" variants={itemVariants}>
           <span>Meet</span> <span className="hero__title--accent">Lane</span>
-          {/* <span className="hero__title--left">
-            Engineering
-          </span>
-          <span className="hero__title--center hero__title--secondary">
-            Scalable
-          </span>
-          <span className="hero__title--right">Experiences.</span> */}
         </motion.h1>
 
         <motion.p className="hero__subtitle" variants={itemVariants}>
@@ -56,9 +49,10 @@ export default function LandingClient() {
           I&apos;m also working on an{" "}
           <strong className="hero__strong">
             AI-focused mobile app for iOS
-          </strong>
-          . If you&apos;re interested or wondering about some of my other work and personal projects,
-          take a look at my projects.
+          </strong>{" "}
+          and creating AI agents in Python using LLMs to develop my skills
+          further. If you&apos;re interested or wondering about some of my other
+          work and projects, take a look at my projects.
         </motion.p>
 
         <motion.div className="hero__actions" variants={itemVariants}>
@@ -69,6 +63,36 @@ export default function LandingClient() {
             Talk to Me
           </Link>
         </motion.div>
+      </motion.section>
+
+      <motion.section
+        className="hero"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.h1 className="hero__title--h3" variants={itemVariants}>
+          <div className="projects-section__heading-container">
+            <h2 className="projects-section__heading">Apprenticeship</h2>
+          </div>
+          {/* <span className="hero__title--left">
+            Engineering
+          </span>
+          <span className="hero__title--center hero__title--secondary">
+            Scalable
+          </span>
+          <span className="hero__title--right">Experiences.</span> */}
+        </motion.h1>
+
+        <motion.p className="hero__subtitle" variants={itemVariants}>
+          Stuff about apprenticeship
+        </motion.p>
+        <motion.p className="hero__subtitle" variants={itemVariants}>
+          What I learned and how it helped me develop
+        </motion.p>
+        <motion.p className="hero__subtitle" variants={itemVariants}>
+          Other if needed
+        </motion.p>
       </motion.section>
       <div className="landing__decoration" aria-hidden="true"></div>
     </main>

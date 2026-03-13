@@ -59,7 +59,7 @@ export default function ProjectsComponent() {
     <div className="projects-container">
       <section className="projects-section">
         <div className="projects-section__heading-container">
-            <h2 className="projects-section__heading">Personal Projects</h2>
+            <h2 className="projects-section__heading">Projects</h2>
         </div>
         <motion.div
           variants={container}
