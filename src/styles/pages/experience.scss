@@ -9,7 +9,7 @@ $text-main: #1a1a1a;
   padding: 4rem 2rem;
 
   @media screen and (max-width: 500px) {
-    padding: 120px 2rem 0;
+    padding: 64px 2rem 0;
   }
 
   &__header {
@@ -26,12 +26,16 @@ $text-main: #1a1a1a;
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 0; 
+    gap: 0;
   }
 
   &__card {
     display: flex;
     gap: 2rem;
+
+    @media (max-width: 500px) {
+      gap: 0.5rem;
+    }
   }
 
   &__time-rail {
@@ -57,8 +61,12 @@ $text-main: #1a1a1a;
   }
 
   &__content {
-    padding-bottom: 4rem; 
+    padding-bottom: 4rem;
     flex: 1;
+  }
+
+  &__card:last-child &__content {
+    padding-bottom: 0;
   }
 
   &__period {

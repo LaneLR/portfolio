@@ -9,12 +9,13 @@ $text-main: #1a1a1a;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 120px 2rem 4rem;
+  padding: 120px 2rem 0;
   width: 100%;
-  gap: 128px;
+  gap: 32px;
 
   @media screen and (max-width: 500px) {
     padding: 120px 2rem 0;
+    gap: 64px;
   }
 
   &__decoration {
@@ -34,7 +35,7 @@ $text-main: #1a1a1a;
 }
 
 .hero {
-  max-width: 900px;
+  max-width: 1400px;
   width: 100%;
   text-align: left;
   position: relative;
@@ -102,7 +103,7 @@ $text-main: #1a1a1a;
   &__subtitle {
     font-size: 1.5rem;
     line-height: 1.6;
-    max-width: 750px;
+    width: 100%;
     margin-bottom: 1rem;
   }
 

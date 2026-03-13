@@ -50,7 +50,8 @@ export default function LandingClient() {
           <strong className="hero__strong">
             AI-focused mobile app for iOS
           </strong>{" "}
-          and creating AI agents in Python using LLMs to develop my skills
+          and creating {" "}
+          <strong className="hero__strong">AI agents</strong> in Python to develop my skills
           further. If you&apos;re interested or wondering about some of my other
           work and projects, take a look at my projects.
         </motion.p>
