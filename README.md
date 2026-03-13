@@ -1,7 +1,7 @@
 # Lane Richardson
 ### Software Engineer
 
-Hi, I'm **Lane Richardson**. This is my software engineering portfolio which showcases my projects, experience, and technical expertise. I created this portfolio to demonstrate my proficiency in modern web frameworks, full-stack development, and collaborative engineering practices; and, more importantly, to share with everyone the work projects and applications I'm proud to have created or be a part of!
+Hi, I'm **Lane Richardson**. This is my software engineering portfolio which showcases my projects, experience, and technical expertise. I created [this portfolio](https://lane-richardson.vercel.app) to demonstrate my proficiency in modern web frameworks, full-stack development, and collaborative engineering practices; and, more importantly, to share with everyone the work projects and applications I'm proud to have created or be a part of!
 
 ## 📋 Multiverse & Verizon Apprenticeship 
 
