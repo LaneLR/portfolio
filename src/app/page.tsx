@@ -9,7 +9,7 @@ export default function Home() {
       <section id="home">
         <LandingClient />
       </section>
-      <section id="experience">
+      <section id="experience" className="experience__wrapper">
         <ExperienceComponent />
       </section>
       <section id="projects">
