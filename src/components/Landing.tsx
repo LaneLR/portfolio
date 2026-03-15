@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { easeOut } from "framer-motion";
+import ScrollHint from "./ScrollHint";
 
 export default function LandingClient() {
   const containerVariants = {
@@ -30,7 +31,7 @@ export default function LandingClient() {
         </motion.h1>
 
         <motion.p className="hero__subtitle" variants={itemVariants}>
-         I&apos;m a{" "}
+          I&apos;m a{" "}
           <strong className="hero__strong">Full-stack Software Engineer</strong>{" "}
           specializing in building scalable frontend architectures.
         </motion.p>
@@ -41,16 +42,16 @@ export default function LandingClient() {
           enhancing user experience for large brands like{" "}
           <strong className="hero__strong">Total Wireless</strong>,{" "}
           <strong className="hero__strong">Straight Talk</strong>, and{" "}
-          <strong className="hero__strong">Visible</strong>. 
+          <strong className="hero__strong">Visible</strong>.
         </motion.p>
         <motion.p className="hero__subtitle" variants={itemVariants}>
           I&apos;m also working on an{" "}
           <strong className="hero__strong">
             AI-focused mobile app for iOS
           </strong>{" "}
-          and creating {" "}
-          <strong className="hero__strong">agentic AI</strong> agents. If you&apos;re interested or wondering about some of my other
-          work, take a look at my projects!
+          and creating <strong className="hero__strong">agentic AI</strong>{" "}
+          agents. If you&apos;re interested or wondering about some of my other
+          work, take a look at my projects.
         </motion.p>
 
         <motion.div className="hero__actions" variants={itemVariants}>
@@ -62,7 +63,7 @@ export default function LandingClient() {
           </Link>
         </motion.div>
       </motion.section>
-      <div className="landing__decoration" aria-hidden="true"></div>
+      <ScrollHint targetId="experience"/>
     </main>
   );
 }
