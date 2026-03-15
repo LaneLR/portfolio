@@ -54,6 +54,16 @@ $text-main: #1a1a1a;
     z-index: 2;
   }
 
+  &__description {
+    font-size: 18px;
+    color: #1a1a1a;
+    line-height: 20px;
+
+  @media screen and (max-width: 500px) {
+    font-size: 16px;
+  }
+  }
+
   &__line {
     flex-grow: 1;
     width: 2px;
@@ -61,7 +71,7 @@ $text-main: #1a1a1a;
   }
 
   &__content {
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
     flex: 1;
   }
 
@@ -91,7 +101,7 @@ $text-main: #1a1a1a;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 1.4rem;
   }
 
   &__tag {
