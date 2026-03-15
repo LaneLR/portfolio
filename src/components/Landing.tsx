@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { easeOut } from "framer-motion";
-import ScrollHint from "./ScrollHint";
 
 export default function LandingClient() {
   const containerVariants = {
@@ -63,7 +62,6 @@ export default function LandingClient() {
           </Link>
         </motion.div>
       </motion.section>
-      <ScrollHint targetId="experience"/>
     </main>
   );
 }
