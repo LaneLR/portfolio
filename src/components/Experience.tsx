@@ -16,11 +16,11 @@ const EXPERIENCES = [
       "HTML",
       "SCSS",
       "Redux",
+      "Java",
       "Figma",
       "Jira",
       "Jenkins",
       "SonarQube",
-      "Java",
     ],
   },
   {
