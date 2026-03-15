@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const EXPERIENCES = [
   {
     company: "Verizon",
-    role: "Software Engineer I",
+    role: "Software Engineer",
     period: "March 2025 - Present",
     description:
       "Optimizing webpages for telecommunications brands like Total Wireless, Straight Talk, and Visible. Primarily focused on frontend performance and SEO, and improving user experience for millions of customers.",
