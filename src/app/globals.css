@@ -5,11 +5,11 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 0;
+  scroll-padding-top: 40px;
 
-  @media screen and (max-width: 500px) {
+  /* @media screen and (max-width: 500px) {
     scroll-padding-top: 50px;
-  }
+  } */
 }
 
 html,
