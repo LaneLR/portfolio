@@ -11,7 +11,7 @@ $breakpoint-mobile: 500px;
   width: 100%;
 
   @media screen and (max-width: $breakpoint-mobile) {
-    padding: 0 32px;
+    padding: 0 1rem;
   }
 }
 
