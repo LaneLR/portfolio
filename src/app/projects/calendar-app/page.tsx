@@ -10,10 +10,10 @@ export default function PlanzPage() {
     techStack: ["JavaScript", "React", "Next.js", "PostgreSQL", "SCSS"],
     // durableSkills: ["Debugging", "", ],
     reflection: {
-      challenge: "Create a functional and visuaully appealing frontend for a project.",
+      challenge: "Create a functional frontend that also provides good user experience.",
       action: "Implemented 'React Big Calendar' as the basis of the frontend. Built other pages using customized React components. Connected a Postgres database for creating accounts and events.",
       result: "A fully functional calendar that lets users make an account, and create events with other users.",
-      learning: "The relationship between the frontend and the backend, and how to set up a working database in Postgres."
+      learning: "A better understanding of the relationship between the frontend and backend, and how to set up a working database in Postgres."
     }
   };
 
