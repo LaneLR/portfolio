@@ -1,19 +1,19 @@
 import ProjectDetail from "@/components/ProjectDetail";
 
-export default function PlanzPage() {
+export default function NewsPage() {
   const inventoryData = {
-    title: "E-commerce Frontend",
-    description: "Built during my Verizon apprenticeship to sharpen my database skills.",
+    title: "News Aggregator SaaS",
+    description: "A news aggregation service that pulls and displays article information from hundreds of news sources via RSS feeds.",
     image: "/images/morningfeeds.png",
     repoLink: "https://github.com/LaneLR/news-aggregator-app",
     demoLink: "https://news-aggregator-app-ecru.vercel.app/",
-    techStack: ["JavaScript", "React", "Next.js", "Node.js", "PostgreSQL"],
-    durableSkills: ["Critical Thinking", "User-Centric Design", "Agile Methodology"],
+    techStack: ["JavaScript", "React", "Next.js", "Node.js", "PostgreSQL", "Stripe", "Styled-components"],
+    // durableSkills: ["Critical Thinking", "User-Centric Design", "Agile Methodology"],
     reflection: {
-      challenge: "Identifying small objects in varied lighting conditions using mobile cameras.",
-      action: "Implemented a pre-processing canvas filter to normalize exposure before sending to the AI model.",
-      result: "Increased identification accuracy by 22% in low-light environments.",
-      learning: "This project solidified my understanding of the 'Deployment' module, specifically handling heavy AI model weights on serverless functions."
+      challenge: "Create a software-as-a-service (SaaS) app using Stripe for membership tiers and paid subscriptions.",
+      action: "Created background workers to periodically search and pull new non-duplicate articles from a list of RSS feeds from media providers. Used a Postgres database to store available non-copyrighted content (title, article image, description, source). Build database schema to enable users to create accounts, like and save articles for future use, and subscribe and maintain a subscription tier via Stripe to access more content.",
+      result: "A functional news aggregation service that users can subscribe to, to access more content.",
+      learning: "Better handling of Next.js server and client components, and how to integrate Stripe API into a project for tiered membership. "
     }
   };
 

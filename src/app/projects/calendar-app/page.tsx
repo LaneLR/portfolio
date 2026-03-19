@@ -3,17 +3,17 @@ import ProjectDetail from "@/components/ProjectDetail";
 export default function PlanzPage() {
   const plansData = {
     title: "Planz Calendar App",
-    description: "Built during my Verizon apprenticeship to sharpen my database skills.",
+    description: "Built during my Verizon apprenticeship to sharpen my database skills. This app acts as a personal calendar that lets users register an account, invite friends, and create plans for themselves and their friends.",
     image: "/images/planzdisplay.png",
     repoLink: "https://github.com/LaneLR/Planz-Calendar-App",
     demoLink: "https://planz-calendar-app.vercel.app/",
-    techStack: ["JavaScript", "React", "Next.js", "Node.js", "PostgreSQL"],
-    durableSkills: ["Critical Thinking", "User-Centric Design", "Agile Methodology"],
+    techStack: ["JavaScript", "React", "Next.js", "PostgreSQL", "SCSS"],
+    // durableSkills: ["Debugging", "", ],
     reflection: {
-      challenge: "Identifying small objects in varied lighting conditions using mobile cameras.",
-      action: "Implemented a pre-processing canvas filter to normalize exposure before sending to the AI model.",
-      result: "Increased identification accuracy by 22% in low-light environments.",
-      learning: "This project solidified my understanding of the 'Deployment' module, specifically handling heavy AI model weights on serverless functions."
+      challenge: "Create a functional and visuaully appealing frontend for a project.",
+      action: "Implemented 'React Big Calendar' as the basis of the frontend. Built other pages using customized React components. Connected a Postgres database for creating accounts and events.",
+      result: "A fully functional calendar that lets users make an account, and create events with other users.",
+      learning: "The relationship between the frontend and the backend, and how to set up a working database in Postgres."
     }
   };
 

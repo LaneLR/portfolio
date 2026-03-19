@@ -9,7 +9,7 @@ interface ProjectDetailProps {
   repoLink: string;
   demoLink?: string;
   techStack: string[];
-  durableSkills: string[];
+  durableSkills?: string[];
   reflection?: {
     challenge?: string;
     action?: string;
@@ -71,7 +71,7 @@ export default function ProjectDetail({
 
         <section className="project-page__reflection">
           <h2 className="project-page__heading">
-            Project Takeaways
+            About the Project
           </h2>
 
           <div className="project-page__carl">

@@ -1,19 +1,19 @@
 import ProjectDetail from "@/components/ProjectDetail";
 
-export default function PlanzPage() {
+export default function PetsPage() {
   const inventoryData = {
     title: "Pets Adoption Platform Backend",
-    description: "A backend service for a pet adoption platform built by Lane Richardson, Lauren Powell, and Kavya Sri Meka.",
+    description: "A backend service for a pet adoption platform that allows users to select pets to adopt and fill out applications for. Built by Lane Richardson, Lauren Powell, and Kavya Sri Meka.",
     image: "/images/resaleiq-portfolio-icon.png",
     repoLink: "https://github.com/CoffeeCodeSyndicate/Java-Pet-Adoption-Backend",
     // demoLink: "https://inventory-app-lac-six.vercel.app/",
-    techStack: ["Java", "Spring Boot", ],
-    durableSkills: ["Critical Thinking", "User-Centric Design", "Agile Methodology"],
+    techStack: ["Java", "Spring Boot", "PostgreSQL"],
+    // durableSkills: ["Critical Thinking", "User-Centric Design", "Agile Methodology"],
     reflection: {
-      challenge: "Identifying small objects in varied lighting conditions using mobile cameras.",
-      action: "Implemented a pre-processing canvas filter to normalize exposure before sending to the AI model.",
-      result: "Increased identification accuracy by 22% in low-light environments.",
-      learning: "This project solidified my understanding of the 'Deployment' module, specifically handling heavy AI model weights on serverless functions."
+      challenge: "Build a backend service in Java and Spring Boot.",
+      action: "Built a set of APIs for registering users, submitting applications to adopt a pet, and adding pets to the database.",
+      result: "Created a functional backend that allows users to register and adopt pets.",
+      learning: "How to make functional APIs in Spring Boot."
     }
   };
 
