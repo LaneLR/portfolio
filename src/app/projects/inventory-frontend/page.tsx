@@ -11,7 +11,7 @@ export default function InventoryPage() {
     // durableSkills: ["Critical Thinking", "User-Centric Design", "Agile Methodology"],
     reflection: {
       challenge: "Build a frontend for an e-commerce site to display and checkout items.",
-      action: "Created components to display and sort items that were populated via SQLite database. Set up a mock account registration and login feature wuth state.",
+      action: "Created components to display and sort items that were populated via SQLite database. Set up a mock account registration and login feature with state.",
       result: "A functional frontend experience for an e-commerce site.",
       learning: "How to correctly utilize React components and state, and how to utilize database for data population."
     }
