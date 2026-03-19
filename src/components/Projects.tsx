@@ -11,7 +11,7 @@ const PROJECTS = [
     description:
       "AI image analysis mobile application for item identification, valuation, and inventory management.",
     image: `/images/MultiPageDisplay.png`,
-    repoLink: `projects/ai-analyzer`,
+    pageLink: `projects/ai-analyzer`,
     link: `projects/ai-analyzer`,
   },
   {
@@ -20,25 +20,27 @@ const PROJECTS = [
     description:
       "Calendar and scheduling app for creating and tracking events with friends.",
     image: `/images/planzdisplay.png`,
-    repoLink: "https://github.com/LaneLR/Planz-Calendar-App",
-    link: `https://planz-calendar-app.vercel.app/`, 
+    // pageLink: "https://github.com/LaneLR/Planz-Calendar-App",
+    pageLink: "projects/calendar-app",
+    link: `projects/calendar-app`, 
   },
   {
     id: "pets-adoption",
     title: "Pets Adoption Platform Backend",
     description: "Backend service for a pet adoption platform, built in Java.",
     image: `/images/resaleiq-portfolio-icon.png`,
-    repoLink:
-      "https://github.com/CoffeeCodeSyndicate/Java-Pet-Adoption-Backend",
-    link: `https://github.com/CoffeeCodeSyndicate/Java-Pet-Adoption-Backend`,
+    // pageLink: "https://github.com/CoffeeCodeSyndicate/Java-Pet-Adoption-Backend",
+    pageLink: "projects/pets",
+    link: `projects/pets`,
   },
   {
     id: "inventory",
-    title: "Inventory Management System",
+    title: "E-commerce Frontend",
     description: "Frontend for an inventory management system.",
     image: `/images/inventoryapp.png`,
-    repoLink: "https://github.com/LaneLR/inventory-app",
-    link: `https://inventory-app-lac-six.vercel.app/`,
+    // pageLink: "https://github.com/LaneLR/inventory-app",
+    pageLink: "projects/inventory-frontend",
+    link: `projects/inventory-frontend`,
   },
   {
     id: "news-aggregator",
@@ -46,8 +48,9 @@ const PROJECTS = [
     description:
       "A web application for aggregating and displaying news from various RSS feeds.",
     image: `/images/morningfeeds.png`,
-    repoLink: "https://github.com/LaneLR/news-aggregator-app",
-    link: `https://news-aggregator-app-ecru.vercel.app/`,
+    // pageLink: "https://github.com/LaneLR/news-aggregator-app",
+    pageLink: "projects/news-aggregator",
+    link: `projects/news-aggregator`,
   },
 ];
 
@@ -89,7 +92,7 @@ export default function ProjectsComponent() {
 function ProjectCard({ project }: { project: any }) {
   return (
     <motion.div variants={item} className="projects-grid__item">
-      <Link href={`${project.link}`} target="_blank" title="Click the image to try out the app yourself" className="projects-grid__link">
+      <Link href={`${project.link}`} title="See more about this project" className="projects-grid__link">
         <div className="projects-grid__image-container">
           <img
             src={project.image}
@@ -100,7 +103,7 @@ function ProjectCard({ project }: { project: any }) {
       </Link>
       <div className="projects-grid__content">
         <h3 className="projects-grid__title">
-          <Link target="_blank" href={`${project.repoLink}`} title="The title links to the repo of this project">{project.title} <LinkIcon size={14} /></Link>
+          <Link href={`${project.pageLink}`} title="The title links to the repo of this project">{project.title}</Link>
         </h3>
         <p className="projects-grid__description">{project.description}</p>
       </div>
