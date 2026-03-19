@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import { Github, Globe, ArrowLeft, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
@@ -68,12 +67,6 @@ export default function ProjectDetail({
               ))}
             </div> 
           </div>
-          {/* <div className="project-page__card">
-            <h3>Durable Skills</h3>
-            <div className="project-page__tags project-page__tags--alt">
-              {project.durableSkills.map(skill => <span key={skill}>{skill}</span>)}
-            </div>
-          </div> */}
         </section>
 
         <section className="project-page__reflection">
